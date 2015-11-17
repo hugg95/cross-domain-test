@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Cross domain test
+  p Domain02
+  script(type='text/javascript').
+    function callback(data) {
+        console.log(data);
+    }
+    function callback1(data) {
+        console.log(data);
+    }
+  script(src="http://test1.iframe.com:8888/test/jsonp?callback=callback")
+  script(src="http://test1.iframe.com:8888/test/custom_jsonp?callback=callback1")

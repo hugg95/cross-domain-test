@@ -1,0 +1,4 @@
+cd ./service01
+npm i
+npm start&cd ../service02
+npm i&npm start
